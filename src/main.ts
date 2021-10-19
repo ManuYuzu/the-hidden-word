@@ -1,34 +1,23 @@
-export function hiddenWord(num:number) {
+export const MIN = 100
+export const MAX = 999999
 
-  // Posibility 1
-  return num
+export function hiddenWord(input:number) {
+  const valuesInRange = (input > MIN && input < MAX)
+
+  if (!valuesInRange) {
+    throw new Error('The input is not valid')
+  }
+
+  return input
     .toString()
-    .replace(/6/gi, 'a')
-    .replace(/1/gi, 'b')
-    .replace(/7/gi, 'd')
-    .replace(/4/gi, 'e')
-    .replace(/3/gi, 'i')
-    .replace(/2/gi, 'l')
-    .replace(/9/gi, 'm')
-    .replace(/8/gi, 'n')
-    .replace(/0/gi, 'o')
-    .replace(/5/gi, 't')
-
-    // Posibility 2
-    /*
-    let keys = {
-      '6':'a',
-      '1':'b',
-      '7':'d',
-      '4':'e',
-      '3':'i',
-      '2':'l',
-      '9':'m',
-      '8':'n',
-      '0':'o',
-      '5':'t'
-    }
-
-    return num.toString().split('').map(value => keys[value]).join('')
-    */
+    .replace(/6/g, 'a')
+    .replace(/1/g, 'b')
+    .replace(/7/g, 'd')
+    .replace(/4/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/2/g, 'l')
+    .replace(/9/g, 'm')
+    .replace(/8/g, 'n')
+    .replace(/0/g, 'o')
+    .replace(/5/g, 't')
 }
