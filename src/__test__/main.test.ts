@@ -12,7 +12,7 @@ describe('To check every input on hiddenWord function', () => {
     return hiddenWord(19123129)
   }).toThrow('The input is not valid'))
 
-  it('Expects', () => expect({ "name": "test", "number": 27 }).toEqual({ "name": "test", "number": 27 }))
+  it('Expects', () => expect({ 'name': 'test', 'number': 27 }).toEqual({ 'name': 'test', 'number': 27 }))
 
   describe('Random Value test', () => {
 
